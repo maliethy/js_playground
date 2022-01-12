@@ -1,0 +1,19 @@
+<form oninput="result1.value=add(parseInt(a.value),parseInt(b.value))">
+  <input id="a" type="number" />
+  <input id="b" type="number" />
+  <output id="result1"></output>
+</form>
+<form oninput="result2.value=add(parseInt(a.value))(parseInt(b.value))">
+  <input id="c" type="number" />
+  <input id="d" type="number" />
+  <output id="result2"></output>
+</form>
+<script>
+  function add(a, b) {
+    return a && b
+      ? a + b
+      : function (c) {
+          return a + c;
+        };
+  }
+</script>
